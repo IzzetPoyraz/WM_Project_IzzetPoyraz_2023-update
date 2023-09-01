@@ -1,0 +1,108 @@
+header a {
+    text-decoration: none;
+    color: inherit;
+}
+
+header .content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 2rem 0;
+
+}
+
+nav {
+    width: 100%;
+    padding-top: 2rem;
+    display: none;
+    animation: up;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+
+}
+
+nav.visible {
+    display: inline;
+    animation: down;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+
+header .logo {
+    font-size: 2rem;
+    font-weight: 700;
+    display: inline-block;
+    font-variant: all-petite-caps
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav a {
+    display: block;
+    padding: 1rem 2rem;
+    text-align: center;
+    position: relative;
+}
+
+.hamburger {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    border: 0;
+    background-color: inherit;
+    color: inherit;
+    font: inherit;
+    padding: 0;
+    font-variant: all-petite-caps;
+}
+
+.hamburger .icon {
+    width: 1.5rem;
+}
+
+.hamburger .icon span {
+    height: 2px;
+    display: block;
+    background-color: var(--primary);
+    margin: 2px 0;
+    transition: transform .2s ease-in-out;
+}
+
+.hamburger[aria-expanded=true] .icon span:nth-child(1) {
+    transform: translateY(4px) rotate(45deg);
+}
+
+.hamburger[aria-expanded=true] .icon span:nth-child(2) {
+    visibility: hidden;
+}
+
+.hamburger[aria-expanded=true] .icon span:nth-child(3) {
+    transform: translateY(-4px) rotate(-45deg);
+}
+@media (min-width: 46.875em) {
+    .hamburger {
+        display: none;
+    }
+    header .content {
+        justify-content: center;
+    }
+  
+    nav ul {
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+    }
+    nav {
+        display: block;
+    }
+    nav.visible {
+        display: block;
+        animation: none;
+    }
+  
+  }

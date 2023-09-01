@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="module" src="js/detail.js"></script>
+    <script defer src="js/header.js"></script>
+    <script type="module" src="js/maps.js"></script>
+    <script type="module" src="js/location.js"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <script async
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDj_tx3RiZTmDnG_UtuRHxWHHcnscDy2P8&callback=initMap">
+        </script>
+
+
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/detail.css">
+    <link rel="stylesheet" href="css/maps.css">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <div class="content">
+                <a class="logo" href="/Client/index.html">StudySpot</a>
+                <button aria-expanded="false" class="hamburger" id="menu">
+                    <span aria-hidden="true" class="icon">
+                        <span></span><span></span><span></span>
+                    </span>
+                    <span>Menu</span>
+                </button>
+                <nav>
+                    <ul>
+                        <li><a class="active" href="/Client/index.html">Home</a></li>
+                        <li><a href="#">StudySpot</a></li>
+                        
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <main>
+            <div class="map">
+                <div id="map"></div>
+            </div>
+
+
+        </main>
+        <footer>
+            <div class="footer-content">
+                <p>&copy; 2023 StudySpot. Alle rechten voorbehouden.</p>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>

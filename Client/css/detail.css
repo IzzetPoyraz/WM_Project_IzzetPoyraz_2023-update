@@ -1,0 +1,85 @@
+@import url(style.css);
+
+.content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3rem;
+    margin-top: 4rem;
+}
+
+.img img {
+    object-fit: contain;
+    height: 350px;
+    width: 100%;
+}
+
+.content-cl {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+
+}
+
+.content h2 {
+    margin-top: 0;
+}
+
+.content-cl a {
+    width: 100%;
+    border: 2px solid var(--primary);
+    padding: 0.5rem;
+    text-align: center;
+    text-decoration: none;
+    color: var(--primary);
+    transition: 0.35s;
+}
+
+.content-cl a:hover {
+    background-color: var(--primary);
+    color: var(--bg);
+}
+
+#randomCafesContainer {
+
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    flex-wrap: wrap;
+}
+
+#reviewForm {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+#reviewForm label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+#reviewForm input,
+#reviewForm textarea {
+    width: 100%;
+    padding: 8px;
+    margin: 0.5rem 0rem;
+    background-color: var(--bg);
+    color: var(--primary);
+    border: 1px solid var(--primary);
+    border-radius: 3px;
+    forced-color-adjust: var(--primary);
+}
+
+#reviewForm button {
+    background-color: var(--bg);
+    color: var(--primary);
+    padding: 10px 15px;
+    border: 2px solid var(--primary);
+    border-radius: 4px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+#reviewForm button:hover {
+    background-color: var(--primary);
+    color: var(--bg);
+}

@@ -1,0 +1,161 @@
+/*Global*/
+*,
+::after,
+::before {
+  box-sizing: border-box
+}
+
+:root {
+  --white: #f4f6f6;
+  --black: #010111;
+  --primary: var(--black);
+  --bg: var(--white);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --primary: var(--white);
+    --bg: var(--black);
+  }
+}
+
+html {
+  background-color: var(--bg);
+  font-family: 'Roboto', sans-serif;
+  color: var(--primary)
+}
+
+img {
+  width: 250px;
+  height: 300px;
+  object-fit: cover;
+}
+
+.container {
+  max-width: 120rem;
+  margin: 0 auto;
+  padding: 0 clamp(1rem, 4vw, 8rem);
+}
+*:focus {
+  outline: 2px solid red;
+  outline-offset: 2px;
+}
+.skip-link {
+  position: absolute;
+  left: -9999px;
+}
+
+.skip-link:focus {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  background-color: #fff;
+  padding: 10px;
+  z-index: 9999;
+}
+
+
+/*Main*/
+
+.main-heading {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.main-cl {
+  display: flex;
+  gap: 3rem;
+}
+
+.main-cl-box {
+  background-color: var(--primary);
+  color: var(--bg);
+  padding: 1rem;
+  
+}
+
+.flex-container {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: normal;
+  align-content: normal;
+  gap: 3rem;
+}
+
+.main-cl-box {
+  display: flex;
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-basis: auto;
+  align-self: auto;
+  order: 0;
+  height: 650px;
+  width: 300px;
+  flex-direction: column;
+}
+
+.content {
+  flex-grow: 1;
+  margin-bottom: 3rem;
+}
+
+.img {
+  text-align: center;
+}
+
+.more-info {
+  width: 100%;
+  border: 2px solid var(--bg);
+  padding: 0.5rem;
+  text-align: center;
+  text-decoration: none;
+  color: var(--bg);
+  transition: 0.35s;
+
+}
+
+.more-info:hover {
+  background-color: var(--bg);
+  color: var(--primary);
+}
+.zoeken {
+  margin: 1rem;
+  margin-bottom: 4rem;
+  text-align: center;
+}
+#searchInput {
+  width: 30%;
+  height: 2rem;
+  padding: 1rem;
+  background-color: var(--bg);
+  color: var(--primary);
+  border: 1px solid var(--primary);
+  border-radius: 3px;
+  forced-color-adjust: var(--primary);
+}
+
+footer {
+  margin-top: 4rem;
+  background-color: var(--bg);
+  padding: 20px 0;
+  text-align: center;
+}
+
+.footer-content {
+  margin: 0 auto;
+  max-width: 960px;
+}
+
+.footer-content p {
+  margin: 0;
+}
+
+
+
+
+/* BREAKPOINTS */
+
+@media (min-width: 46.875em) {}
